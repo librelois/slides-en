@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pallet Identity</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../common.css">
+  <!--<link rel="stylesheet" href="../../lib/mermaid.dark.css">-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+</head>
+
+<body>
+  <textarea id="source"></textarea>
+  <script src="../../lib/mermaid.min.js"></script>
+  <script src="../../lib/remark-latest.min.js"></script>
+  <script>
+    var slideshow = remark.create({
+      sourceUrl: 'slideshow.md',
+      highlightStyle: 'tomorrow-night',
+      countIncrementalSlides: false
+    });
+    // don't let mermaid automatically load on start
+    mermaid.initialize({
+      theme: 'dark',
+      startOnLoad: false,
+      cloneCssStyles: false
+    });
+
+    slideshow.on("afterShowSlide", s => {
+      const [slide] = document.getElementsByClassName("remark-visible");
+      mermaid.sequenceConfig = {
+        diagramMarginY: 0
+      };
+      mermaid.init(Array.from(slide.getElementsByClassName("mermaid")));
+    });
+  </script>
+</body>
+
+</html>

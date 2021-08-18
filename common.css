@@ -1,0 +1,30 @@
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
+
+* {
+  font-family: 'Fira Code', monospace;
+}
+
+.dark {
+  background: #222;
+  background-color: #222;
+  color: #fff;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+a {
+  color: rgb(0, 238, 255);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.question {
+  font-style: italic;
+  color: #888;
+}
