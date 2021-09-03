@@ -27,8 +27,6 @@ background-image: url(../../images/moonbeam-background.png)
 1. [Federated naming system](#federated)
 1. [Judgement](#judgement)
 1. [Sub-identities](#subidentities)
-1. [Limitations](#limitations)
-
 
 ---
 
